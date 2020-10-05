@@ -28,8 +28,8 @@ class Fib extends Component {
   handleSubmit = async event => {
     event.preventDefault();
 
-    await axios.post('/api/values', {  // notice the /api.  This is for
-      index: this.state.index         // routing to the nginx server
+    await axios.post('/api/values', {
+      index: this.state.index
     });
     this.setState({ index: '' });
   };
